@@ -25,36 +25,48 @@ class House:
     def __eq__(self, other):
         if isinstance(other, House):
             return self.number_of_floors == other.number_of_floors
+        elif isinstance(other, int):
+            return self.number_of_floors == other
         else:
             print('Ошибка')
 
     def __lt__(self, other):
         if isinstance(other, House):
             return self.number_of_floors > other.number_of_floors
+        elif isinstance(other, int):
+            return self.number_of_floors > other
         else:
             print('Ошибка')
 
     def __le__(self, other):
         if isinstance(other, House):
             return self.number_of_floors <= other.number_of_floors
+        elif isinstance(other, int):
+            return self.number_of_floors <= other
         else:
             print('Ошибка')
 
     def __gt__(self, other):
         if isinstance(other, House):
             return self.number_of_floors > other.number_of_floors
+        elif isinstance(other, int):
+            return self.number_of_floors > other
         else:
             print('Ошибка')
 
     def __ge__(self, other):
         if isinstance(other, House):
             return self.number_of_floors >= other.number_of_floors
+        elif isinstance(other, int):
+            return self.number_of_floors >= other
         else:
             print('Ошибка')
 
     def __ne__(self, other):
         if isinstance(other, House):
             return self.number_of_floors != other.number_of_floors
+        elif isinstance(other, int):
+            return self.number_of_floors != other
         else:
             print('Ошибка')
 
@@ -142,6 +154,9 @@ print(h1 >= h2)  # __ge__
 print(h1 < h2)  # __lt__
 print(h1 <= h2)  # __le__
 print(h1 != h2)  # __ne__
+
+print(h1 == 30)
+print(h1 > 10)
 
 h1 = h1 - 1
 print(h1)
