@@ -12,6 +12,7 @@ def custom_write(file_name, strings):
         res[(count_str, file.tell())] = string
         file.write(string + '\n')
         count_str +=1
+    file.close()
     return res
 
 
