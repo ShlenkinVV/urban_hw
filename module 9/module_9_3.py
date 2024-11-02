@@ -3,6 +3,8 @@ author - Shlenkin Vladimir
 GitHub - ShlenkinVV
 """
 
+# Генераторные сборки
+
 first = ['Strings', 'Student', 'Computers']
 second = ['Строка', 'Урбан', 'Компьютер']
 
