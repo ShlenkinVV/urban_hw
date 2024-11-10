@@ -9,19 +9,20 @@ import threading
 def write_words(word_count, file_name):
     with open(file_name, 'w', encoding='utf-8') as file:
         for i in range(word_count):
-            file.write('Какое-то слово №' + str(i))
+            file.write('Какое-то слово №' + str(i+1) + '\n')
             time.sleep(0.1)
     print(f'Завершилась запись в файл: {file_name}')
 
+
 start_at = time.time()
 
-write_words(10, 'example1.txt')
-write_words(30, 'example2.txt')
-write_words(200, 'example3.txt')
-write_words(100, 'example4.txt')
+# write_words(10, 'example1.txt')
+# write_words(30, 'example2.txt')
+# write_words(200, 'example3.txt')
+# write_words(100, 'example4.txt')
 
 end_at = time.time()
-print(f'Работа потоков: {end_at-start_at}')
+print(f'Работа потоков: {end_at - start_at}')
 
 start_at = time.time()
 
@@ -41,4 +42,4 @@ thread_3.join()
 thread_4.join()
 
 end_at = time.time()
-print(f'Работа потоков: {end_at-start_at}')
+print(f'Работа потоков: {end_at - start_at}')
